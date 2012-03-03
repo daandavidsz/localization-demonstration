@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Localization demonstration</title>
+        <link href="jquery-ui.css" rel="stylesheet" media="all"/>
+        <link href='http://fonts.googleapis.com/css?family=Share' rel='stylesheet' type='text/css'>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script>
+            google.load("jquery", "1.7.1");
+            google.load("jqueryui", "1.8.16");
+        </script>
+        <style type="text/css">
+        
+            * {
+                font-family: 'Share';
+            }
+
+            p {
+                width: 600px;
+            }
+
+            .slider {
+                margin: 10px 20px 10px 20px;
+                width: 300px;
+            }
+
+        </style>       
+    </head>
+    <body>
+        <h1>Localization demonstration</h1>
+
+        <table>
+            <tr>
+                <td><strong>Environment</strong></td>
+                <td>Green</td>
+                <td><div id="environment_slider" class="slider"></div></td>
+                <td>Yellow</td>
+            </tr>
+            <tr>
+                <td><strong>Successful motion</strong></td>
+                <td></td>
+                <td><div id="movement_slider" class="slider"></div></td>
+                <td id="movement_slider_value"></td>
+            </tr>       
+            <tr>
+                <td><strong>Sensor accuracy</strong></td>
+                <td></td>
+                <td><div id="sensor_slider" class="slider"></div></td>
+                <td id="sensor_slider_value"></td>
+            </tr>
+        </table>
+
+        <canvas id="environment" width="320" height="320"></canvas>
+        <canvas id="prediction" width="320" height="320"></canvas>
+
+        <p>
+            This is a visual demonstration of the localization algorithm that was discussed in the
+            homework assignment 1.4 of the <a href="http://www.udacity.com">Udacity</a>
+            course <a href="http://www.udacity.com/overview/Course/cs373">CS373</a>. The arrow keys
+            can be used to move the object that is being localized (the black square). The map on
+            the right will show the predictions of the algorithm. If a move failed, the square will stay on the same tile. If the sensor registered the wrong color, the square will turn red.
+        </p>
+
+        <p>
+            This example uses HTML5 canvas and has been tested on the Linux versions of Firefox 10 and Chromium 17.
+        </p>
+
+        <script src="underscore-min.js"></script>
+        <script src="localization.js"></script>
+    </body>
+</html>
