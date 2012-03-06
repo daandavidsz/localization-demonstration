@@ -40,7 +40,6 @@
 
         obj.clone = function() {
             var cloned = createMap(this.width, this.height);
-            cloned.seed = this.seed;
             for (var i = 0; i < this.width * this.height; i++) {
                 cloned[i] = this[i];
             }
