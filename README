@@ -1,0 +1,9 @@
+This is a visual demonstration of the localization algorithm that was
+discussed in the homework assignment 1.4 of the Udacity course CS373. The
+arrow keys can be used to move the object that is being localized (the black
+square). The map on the right will show the predictions of the algorithm. If
+a move failed, the square will stay on the same tile. If the sensor
+registered the wrong color, the square will turn red.
+
+This example uses HTML5 canvas and has been tested on the Linux versions of 
+Firefox 10 and Chromium 17.
